@@ -245,7 +245,7 @@ const App: React.FC = () => {
   }, []);
 
   // Smooth Scroll Handler
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const scrollToSection = (e: React.MouseEvent, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
@@ -342,7 +342,7 @@ const App: React.FC = () => {
             animate={{ opacity: 1, y: [0, 10, 0] }}
             transition={{ delay: 1, duration: 2, repeat: Infinity }}
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
-            onClick={(e) => scrollToSection(e as any, 'problem')}
+            onClick={(e) => scrollToSection(e, 'problem')}
           >
             <span className="text-[10px] uppercase tracking-widest text-slate-500">Explore</span>
             <ChevronDown className="text-amber-500" size={24} />
